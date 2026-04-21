@@ -1,1 +1,0 @@
-# restful-booker-tests
