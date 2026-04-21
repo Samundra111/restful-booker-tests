@@ -1,0 +1,19 @@
+# Python Environment
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Secrets & Config
+.env
+
+# Test Reports & Logs
+reports/
+*.html
+*.log
+.pytest_cache/
+
+# OS Specific
+.DS_Store
+Thumbs.db
