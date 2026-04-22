@@ -1,5 +1,6 @@
 from pages.contact_page import ContactPage
 from pages.admin_page import AdminPage
+from pages.booking_page import BookingPage
 from playwright.sync_api import Page,expect
 
 
@@ -41,3 +42,14 @@ def test_admin_logout(page: Page):
     expect(page).to_have_url(
         "https://automationintesting.online/"
     )
+
+def test_end_to_end_booking(page:Page):
+    bookingpage=BookingPage(page)
+    page.goto("https://automationintesting.online/")
+    bookingpage.check_availability()
+    bookingpage.book_first_room()
+    bookingpage.reserve_now()
+    bookingpage.complete_reservation("Sam","hora","sa@gmail.com","9847487457000")
+    expect(bookingpage.confirmed_msg).to_be_visible()
+    expect(bookingpage.return_home).to_be_visible()
+
