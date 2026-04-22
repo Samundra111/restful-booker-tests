@@ -13,6 +13,7 @@ A complete QA automation project for Restful Booker hotel booking application co
 - GitHub Actions (CI/CD)
 
 ## Project Structure
+```
 restful-booker-tests/
 ├── pages/
 │   ├── booking_page.py           # Room booking POM
@@ -28,7 +29,7 @@ restful-booker-tests/
 ├── requirements.txt              # Dependencies
 ├── .env                          # Environment variables
 └── .gitignore                    # Git ignore rules
-
+```
 ## Test Coverage
 
 ### UI Tests
